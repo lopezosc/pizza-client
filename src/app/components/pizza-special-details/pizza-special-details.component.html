@@ -1,0 +1,90 @@
+
+
+<div *ngIf="currentpizzaSpecial" class="edit-form">
+  <h4>Selected Item Details</h4>
+  <form>
+    <div class="form-group col-md-6">
+      <label for="title">Title</label>
+      <input
+        type="text"
+        class="form-control"
+        id="title"
+        [(ngModel)]="currentpizzaSpecial.title"
+        name="title"
+      />
+    </div>
+    <div class="form-group col-md-12">
+      <label for="description">Description</label>
+      <input
+        type="text"
+        class="form-control"
+        id="description"
+        [(ngModel)]="currentpizzaSpecial.description"
+        name="description"
+      />
+    </div>
+    <div class="form-group col-md-3">
+      <label for="price">Price</label>
+      <input
+        type="text"
+        class="form-control"
+        id="description"
+        [(ngModel)]="currentpizzaSpecial.price"
+        name="price"
+      />
+    </div>
+
+
+  </form>
+
+  <button class="badge badge-danger mr-2"
+
+  mwlConfirmationPopover
+  [popoverTitle]="popoverTitle"
+  [popoverMessage]="popoverMessage"
+  [confirmText]="confirmText"
+  [cancelText]="cancelText"
+  [placement]="placement"
+  (confirm)="confirmedDelete()"
+  (cancel)="cancelClicked = true"
+  confirmButtonType="danger"
+  cancelButtonType="outline-secondary"
+  (click)="confirmClicked = false; cancelClicked = false"
+  [appendToBody]="true">
+    Delete
+  </button>
+
+  <button type="submit" class="badge badge-success" (click)="updatePizzaSpecial()">
+    Update
+  </button>
+  <p>{{ message }}</p>
+</div>
+
+<div *ngIf="!currentpizzaSpecial">
+  <br />
+  <p>Cannot access this Tutorial...</p>
+</div>
+
+
+<!-- <div class="text-center">
+  <span >
+    <button
+      class="btn btn-outline-primary"
+      mwlConfirmationPopover
+      [popoverTitle]="popoverTitle"
+      [popoverMessage]="popoverMessage"
+      [confirmText]="confirmText"
+      [cancelText]="cancelText"
+      [placement]="placement"
+      (confirm)="confirmedDelete()"
+      (cancel)="cancelClicked = true"
+      confirmButtonType="danger"
+      cancelButtonType="outline-secondary"
+      (click)="confirmClicked = false; cancelClicked = false"
+      [appendToBody]="true"
+    >
+      Show on {{ placement }}
+    </button>
+
+  </span>
+</div> -->
