@@ -2,7 +2,7 @@ export const environment = {
   production: false,
   firebase: {
     apiKey: 'AIzaSyC3t5ahLWLwat0p0zAeyoBH-Ig8oEvIkuo',
-    authDomain: 'web-pizza-f327b.firebaseapp.com',
+    authDomain: 'web-XXXX-f327b.firebaseapp.com',
     databaseURL: 'https://web-XXXX-f327b.firebaseio.com',
     projectId: 'web-pizza-f327b',
     storageBucket: 'web-pizza-f327b.appspot.com',
